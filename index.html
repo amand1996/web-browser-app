@@ -14,24 +14,28 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </head>
   <body>
-            <div class="panel panel-primary" >
+            <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <input id="urlinput" class="form-control" style="width:22%;" placeholder="Enter URL here."/>
-                    <button id="Go" class="btn btn-default btn-sm">Go</button>
-                    <ul id="tabbar" class="btn">
-                      <button class="btn btn-md btn-primary">New Tab</button>
-                      <div id="newTab"></div>
-                      <button id="addNewButton" class="btn btn-sm btn-primary">+</button>
-                    </ul>
+                      
+                  <div id="newUrlbar">
+                    <button id="homeButton" class="btn btn-md btn-info" style="float:left;"><span class="glyphicon glyphicon-home"></span> Home</button>
+                    <input id="urlinput" class="form-control" style="width:80%; float:left;" placeholder="Enter URL here."/>
+                    <button id="Go" class="btn btn-info" style="float:left;"><span class="glyphicon glyphicon-search"></span> Search</button>
+                    <br style="clear:both" />
+                    <div id="newTab">
+                        <button class="btn btn-md btn-primary" id="btn" style="float:left;">New Tab</button>
+                      </div>
+                      <button id="addNewButton" class="btn btn-md btn-primary" style="float:left;">+</button>
                 </div>
+                  </div>
+                  
             </div>
 
             
-            
+            <div id="newWebview" class="container">
+                <webview src="http://www.google.com" id="webviewpane" style="height:590px;"></webview>
+            </div>
 
-          <div id="views" style="width:100%">
-            <webview src="http://www.google.com" id="webviewpane" style="height:590px;" class="view active"></webview>
-          </div>
         
   </body>
   <script>
