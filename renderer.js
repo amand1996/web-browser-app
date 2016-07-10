@@ -27,6 +27,3 @@ $('#addNewButton').click(function(){
 	$('#newWebview').append('<webview src="http://www.google.com" id="webviewpane" style="height:590px; display:none;"></webview>');
 });
 
-function newTab(){
-
-}

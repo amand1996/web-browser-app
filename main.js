@@ -5,11 +5,11 @@ const BrowserWindow = electron.BrowserWindow
 let mainWindow
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 1200, height: 800});
+  mainWindow = new BrowserWindow({width: 1200, height: 800, transparent: true});
 
   mainWindow.loadURL(`file://${__dirname}/index.html`)
 
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.on('closed', function () {
     mainWindow = null;
